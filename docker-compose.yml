@@ -1,0 +1,5 @@
+radikorec:
+  build: .
+  restart: always
+  volumes:
+    - /var/podcast:/radikorec

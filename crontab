@@ -1,3 +1,3 @@
-5 8 * * 1-5 root /usr/local/bin/radikorec --duration 224 --prefix SUPPIN --channel NHK1 --directory /radikorec
-5 8 * * 6 root /usr/local/bin/radikorec --duration 40 --prefix BUNGEI --channel NHK1 --directory /radikorec
+5 8 * * 1-5 root /usr/local/bin/rec_radiru.sh R1 224 /radikorec SUPPIN
+5 8 * * 6 root /usr/local/bin/rec_radiru.sh R1 40 /radikorec BUNGEI
 

@@ -1,3 +1,7 @@
-5 8 * * 1-5 root /usr/local/bin/rec_radiru.sh R1 224 /radikorec SUPPIN
-5 8 * * 6 root /usr/local/bin/rec_radiru.sh R1 40 /radikorec BUNGEI
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+RECORDER="/usr/local/bin/rec_radiru.sh"
+
+5 8 * * 1-5 root $RECORDER R1 224 /radikorec SUPPIN
+5 8 * * 6 root $RECORDER R1 40 /radikorec BUNGEI
 

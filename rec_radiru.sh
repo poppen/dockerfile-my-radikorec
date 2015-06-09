@@ -118,4 +118,5 @@ rtmpdump \
          --live \
          --stop ${DURATION} \
          -o "/tmp/${filename}" && \
-mv "/tmp/${filename}" "${outdir%%/}/${filename}"
+ffmpeg -i "/tmp/${filename}" -acodec copy "${outdir%%/}/${filename}" && \
+rm "/tmp/${filename}"

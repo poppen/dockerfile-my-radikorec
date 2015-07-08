@@ -1,3 +1,25 @@
-5 8 * * 1-5 root /usr/local/bin/radikorec --duration 224 --prefix SUPPIN --channel NHK1 --directory /radikorec
-5 8 * * 6 root /usr/local/bin/radikorec --duration 40 --prefix BUNGEI --channel NHK1 --directory /radikorec
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+RECORDER="/usr/local/bin/rec_radiru.sh"
+
+5 8 * * 1-5 root $RECORDER R1 224 /radikorec SUPPIN
+5 8 * * 6 root $RECORDER R1 40 /radikorec BUNGEI
+
+45 6 * * 1-5 root $RECORDER R2 15 /radikorec KAIWA
+# 25 12 * * 1-5 root $RECORDER R2 15 /radikorec KAIWA
+# 45 15 * * 1-5 root $RECORDER R2 15 /radikorec KAIWA
+# 45 21 * * 1-5 root $RECORDER R2 15 /radikorec KAIWA
+
+15 9 * * 4-5 root $RECORDER R2 15 /radikorec BUSINESS2
+# 40 12 * * 4-5 root $RECORDER R2 15 /radikorec BUSINESS2
+# 20 23 * * 4-5 root $RECORDER R2 15 /radikorec BUSINESS2
+
+30 8 * * 1-5 root $RECORDER R2 10 /radikorec TIMETRIAL
+# 15 12 * * 1-5 root $RECORDER R2 10 /radikorec TIMETRIAL
+# 0 23 * * 1-5 root $RECORDER R2 10 /radikorec TIMETRIAL
+
+30 16 * * 0 root $RECORDER R2 75 /radikorec KAIWA
+0 7 * * 6 root $RECORDER R2 50 /radikorec TIMETRIAL
+30 23 * * 0 root $RECORDER R2 50 /radikorec TIMETRIAL
+0 11 * * 6 root $RECORDER R2 45 /radikorec BUSINESS2
 

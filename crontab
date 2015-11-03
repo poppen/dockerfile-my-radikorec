@@ -15,8 +15,8 @@ RECORDER="/usr/local/bin/rec_radiru.sh"
 # 20 23 * * 4-5 root $RECORDER R2 15 /radikorec BUSINESS2
 
 30 8 * * 1-5 root $RECORDER R2 10 /radikorec TIMETRIAL
-# 15 12 * * 1-5 root $RECORDER R2 10 /radikorec TIMETRIAL
-# 0 23 * * 1-5 root $RECORDER R2 10 /radikorec TIMETRIAL
+15 12 * * 1-5 root $RECORDER R2 10 /radikorec2 TIMETRIAL
+0 23 * * 1-5 root $RECORDER R2 10 /radikorec2 TIMETRIAL
 
 30 16 * * 0 root $RECORDER R2 75 /radikorec KAIWA
 0 7 * * 6 root $RECORDER R2 50 /radikorec TIMETRIAL

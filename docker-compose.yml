@@ -3,3 +3,4 @@ radikorec:
   restart: always
   volumes:
     - /var/podcast:/radikorec
+    - /var/podcast2:/radikorec2

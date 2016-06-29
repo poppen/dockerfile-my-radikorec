@@ -33,4 +33,4 @@ RADIRU="/usr/local/bin/rec_radiru.sh"
 #
 0 22 * * 6 root $RADIKO TBS 120 /radikorec UTAMARU 2>&1 | logger -t radikorec -p local0.info
 
-0 13 * * 2 root $RADIKO TBS 150 /radikorec TAMA954 2>&1 | logger -t radikorec -p local0.info
+0 13 * * 2,4 root $RADIKO TBS 150 /radikorec TAMA954 2>&1 | logger -t radikorec -p local0.info

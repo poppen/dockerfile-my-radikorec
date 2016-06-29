@@ -8,7 +8,7 @@ RADIRU="/usr/local/bin/rec_radiru.sh"
 #
 5 8 * * 1-5 root $RADIRU R1 224 /radikorec SUPPIN 2>&1 | logger -t radikorec -p local0.info
 5 8 * * 6 root $RADIRU R1 40 /radikorec BUNGEI 2>&1 | logger -t radikorec -p local0.info
-30 7 1-7 * * root [ $(date "+\%w") -eq 1 ] && root $RADIRU R1 30 /radikorec MYASA 2>&1 | logger -t radikorec -p local0.info
+30 7 * * 1 root root $RADIRU R1 30 /radikorec MYASA 2>&1 | logger -t radikorec -p local0.info
 
 45 6 * * 1-5 root $RADIRU R2 15 /radikorec KAIWA 2>&1 | logger -t radikorec -p local0.info
 # 25 12 * * 1-5 root $RADIRU R2 15 /radikorec KAIWA 2>&1 | logger -t radikorec -p local0.info

@@ -6,18 +6,15 @@ RADIRU="/usr/local/bin/rec_radiru.sh"
 #
 # NHK
 #
-5 8 * * 1-5 root $RADIRU R1 224 /radikorec SUPPIN 2>&1 | logger -t radikorec -p local0.info
 5 8 * * 6 root $RADIRU R1 40 /radikorec BUNGEI 2>&1 | logger -t radikorec -p local0.info
-30 7 * * 1 root $RADIRU R1 30 /radikorec MYASA 2>&1 | logger -t radikorec -p local0.info
+
+45 7 * * 0 root $RADIRU R1 10 /radikorec COLUMN 2>&1 | logger -t radikorec -p local0.info
 
 45 6 * * 1-5 root $RADIRU R2 15 /radikorec KAIWA 2>&1 | logger -t radikorec -p local0.info
-# 25 12 * * 1-5 root $RADIRU R2 15 /radikorec KAIWA 2>&1 | logger -t radikorec -p local0.info
-# 45 15 * * 1-5 root $RADIRU R2 15 /radikorec KAIWA 2>&1 | logger -t radikorec -p local0.info
-# 45 21 * * 1-5 root $RADIRU R2 15 /radikorec KAIWA 2>&1 | logger -t radikorec -p local0.info
 
 15 9 * * 4-5 root $RADIRU R2 15 /radikorec BUSINESS2 2>&1 | logger -t radikorec -p local0.info
-# 40 12 * * 4-5 root $RADIRU R2 15 /radikorec BUSINESS2 2>&1 | logger -t radikorec -p local0.info
-# 20 23 * * 4-5 root $RADIRU R2 15 /radikorec BUSINESS2 2>&1 | logger -t radikorec -p local0.info
+
+0 14 * * 5 root $RADIRU FM 240 /radikorec OPERA 2>&1 | logger -t radikorec -p local0.info
 
 30 8 * * 1-5 root $RADIRU R2 10 /radikorec TIMETRIAL 2>&1 | logger -t radikorec -p local0.info
 15 12 * * 1-5 root $RADIRU R2 10 /radikorec2 TIMETRIAL 2>&1 | logger -t radikorec -p local0.info
@@ -32,4 +29,4 @@ RADIRU="/usr/local/bin/rec_radiru.sh"
 #
 0 22 * * 6 root $RADIKO TBS 120 /radikorec UTAMARU 2>&1 | logger -t radikorec -p local0.info
 
-0 13 * * 2,4 root $RADIKO TBS 150 /radikorec TAMA954 2>&1 | logger -t radikorec -p local0.info
+0 13 * * 2 root $RADIKO TBS 150 /radikorec TAMA954 2>&1 | logger -t radikorec -p local0.info

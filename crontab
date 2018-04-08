@@ -10,7 +10,7 @@ RADIRU="/usr/local/bin/rec_radiru.sh"
 
 40 7 * * 6 root $RADIRU R1 20 /radikorec MYASA_BUNKA 2>&1 | logger -t radikorec -p local0.info
 
-5 8 * * 6 root $RADIRU R1 40 /radikorec BUNGEI 2>&1 | logger -t radikorec -p local0.info
+0 1 * * 1 root $RADIRU R1 60 /radikorec BUNGEI 2>&1 | logger -t radikorec -p local0.info
 
 45 7 * * 0 root $RADIRU R1 10 /radikorec COLUMN 2>&1 | logger -t radikorec -p local0.info
 

@@ -20,6 +20,8 @@ RADIRU="/usr/local/bin/rec_radiru.sh"
 
 0 14 * * 5 root $RADIRU FM 240 /radikorec OPERA 2>&1 | logger -t radikorec -p local0.info
 
+5 10 * * 6 root $RADIRU R1 50 /radikorec SHINUCHI 2>&1 | logger -t radikorec -p local0.info
+
 30 8 * * 1-5 root $RADIRU R2 10 /radikorec TIMETRIAL 2>&1 | logger -t radikorec -p local0.info
 15 12 * * 1-5 root $RADIRU R2 10 /radikorec2 TIMETRIAL 2>&1 | logger -t radikorec -p local0.info
 0 23 * * 1-5 root $RADIRU R2 10 /radikorec2 TIMETRIAL 2>&1 | logger -t radikorec -p local0.info
